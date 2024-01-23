@@ -16,9 +16,9 @@ spec:
       interval: 1m
   values:
     controller:
+      replicaCount: 3
       service:
         loadBalancerIP: 192.168.20.129
-        replicaCount: 3
       ingressClassResource:
         name: internal-nginx
         enabled: true
