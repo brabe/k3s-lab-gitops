@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: flux-ingress-system
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: ingress-system
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/brabe/k3s-lab-gitops
+    targetRevision: HEAD
+    path: apps/ingress
+
+  # Destination cluster and namespace to deploy the application
+  destination:
+    name: in-cluster
+    namespace: flux-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true

@@ -8,4 +8,5 @@ resources:
   - "applications/eraser.yaml"
   - "applications/external-secrets.yaml"
   - "applications/flux.yaml"
+  - "applications/ingress.yaml"
   - "applications/kps.yaml"
