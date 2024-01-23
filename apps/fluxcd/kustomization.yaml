@@ -16,5 +16,6 @@ resources:
   - helm/nfs.yaml
   - helm/nginx.yaml
   - helm/sealed-secrets.yaml
+  - helm/smb.yaml
   - helm/traefik.yaml
   - helm/weave-works.yaml
