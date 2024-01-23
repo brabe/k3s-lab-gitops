@@ -12,6 +12,7 @@ resources:
   - "applications/ingress.yaml"
   - "applications/kps.yaml"
   - "applications/nfs.yaml"
+  - "applications/smb.yaml"
 
   - "secrets/sa.yaml"
   - "secrets/store.yaml"
