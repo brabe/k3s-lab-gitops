@@ -11,3 +11,7 @@ resources:
   - "applications/flux.yaml"
   - "applications/ingress.yaml"
   - "applications/kps.yaml"
+
+  - "secrets/sa.yaml"
+  - "secrets/store.yaml"
+  - "secrets/webhook.yaml"
