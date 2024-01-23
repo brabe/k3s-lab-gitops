@@ -6,6 +6,7 @@ resources:
   - https://github.com/fluxcd/flux2/manifests/install?ref=v2.2.2
 
   # Add Helm Repositories
+  - helm/arc.yaml
   - helm/atlassian.yaml
   - helm/azure-workload-identity.yaml
   - helm/cert-manager.yaml
