@@ -16,4 +16,4 @@ spec:
       interval: 1m
   values:
     adminUser:
-      create: true
+      create: false
