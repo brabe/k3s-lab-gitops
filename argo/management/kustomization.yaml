@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: argocd
 
 resources:
+  - "applications/arc.yaml"
   - "applications/azwi.yaml"
   - "applications/cert-manager.yaml"
   - "applications/eraser.yaml"
