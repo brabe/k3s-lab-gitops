@@ -11,6 +11,7 @@ resources:
   - helm/cert-manager.yaml
   - helm/external-secrets.yaml
   - helm/harbor.yaml
+  - helm/kps.yaml
   - helm/nfs.yaml
   - helm/nginx.yaml
   - helm/sealed-secrets.yaml
