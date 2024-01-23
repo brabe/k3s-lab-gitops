@@ -15,3 +15,4 @@ resources:
   - helm/nginx.yaml
   - helm/sealed-secrets.yaml
   - helm/traefik.yaml
+  - helm/weave-works.yaml
