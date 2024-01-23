@@ -16,3 +16,6 @@ resources:
   - helm/sealed-secrets.yaml
   - helm/traefik.yaml
   - helm/weave-works.yaml
+
+  # Add Weave GitOps UI
+  - weave.yaml
