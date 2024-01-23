@@ -5,4 +5,5 @@ namespace: argocd
 
 resources:
   - "applications/azwi.yaml"
+  - "applications/external-secrets.yaml"
   - "applications/flux.yaml"
