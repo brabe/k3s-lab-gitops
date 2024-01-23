@@ -9,6 +9,7 @@ resources:
   - helm/atlassian.yaml
   - helm/azure-workload-identity.yaml
   - helm/cert-manager.yaml
+  - helm/eraser.yaml
   - helm/external-secrets.yaml
   - helm/harbor.yaml
   - helm/kps.yaml
