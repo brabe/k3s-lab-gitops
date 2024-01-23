@@ -39,6 +39,8 @@ spec:
       replicas: 3
     registry:
       replicas: 3
+    trivy:
+      replicas: 3
     
     ipFamily:
       ipv6:
