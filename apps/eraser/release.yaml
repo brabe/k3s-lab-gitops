@@ -15,4 +15,4 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    azureTenantID: 8c366e63-876b-4edc-b2b4-f83942b3ee56
+    
