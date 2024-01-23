@@ -11,6 +11,7 @@ resources:
   - "applications/flux.yaml"
   - "applications/ingress.yaml"
   - "applications/kps.yaml"
+  - "applications/nfs.yaml"
 
   - "secrets/sa.yaml"
   - "secrets/store.yaml"
