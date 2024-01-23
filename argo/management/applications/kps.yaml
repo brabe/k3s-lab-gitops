@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: https://github.com/brabe/k3s-lab-gitops
     targetRevision: HEAD
-    path: apps/ksp
+    path: apps/kps
 
   # Destination cluster and namespace to deploy the application
   destination:
