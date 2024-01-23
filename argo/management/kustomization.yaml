@@ -10,6 +10,7 @@ resources:
   - "applications/eraser.yaml"
   - "applications/external-secrets.yaml"
   - "applications/flux.yaml"
+  - "applications/harbor.yaml"
   - "applications/ingress.yaml"
   - "applications/kps.yaml"
   - "applications/nfs.yaml"

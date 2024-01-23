@@ -1,0 +1,61 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: harbor
+  namespace: harbor
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: harbor
+      version: "v1.14.0"
+      sourceRef:
+        kind: HelmRepository
+        name: harbor
+        namespace: flux-system
+      interval: 1m
+  values:
+    expose:
+      type: ingress
+      tls:
+        enabled: true
+        certSource: secret
+      ingress:
+        hosts:
+          core: harbor.lab.gravitytech.io
+        className: internal-nginx
+        annotations:
+          nginx.ingress.kubernetes.io/ssl-redirect: "true"
+          nginx.ingress.kubernetes.io/proxy-body-size: "0"
+          cert-manager.io/cluster-issuer: "le-prod"
+    externalURL: https://harbor.lab.gravitytech.io
+    ipFamily:
+      ipv6:
+        enabled: false
+    metrics:
+      enabled: true
+    persistence:
+      enabled: true
+      resourcePolicy: "delete"
+      persistentVolumeClaim:
+        registry:
+          existingClaim: "harbor-claim"
+          subPath: "registry"
+          accessMode: ReadWriteMany
+        jobservice:
+          jobLog:
+            existingClaim: "harbor-claim"
+            subPath: "job-log"
+            accessMode: ReadWriteMany
+        database:
+          existingClaim: "harbor-claim"
+          subPath: "database"
+          accessMode: ReadWriteMany
+        redis:
+          existingClaim: "harbor-claim"
+          subPath: "redis"
+          accessMode: ReadWriteMany
+        trivy:
+          existingClaim: "harbor-claim"
+          subPath: "trivy"
+          accessMode: ReadWriteMany
