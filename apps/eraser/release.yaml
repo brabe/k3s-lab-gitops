@@ -16,8 +16,9 @@ spec:
       interval: 1m
   values:
     runtimeConfig:
-      runtime:
-        address: unix:///run/k3s/containerd/containerd.sock
+      manager:
+        runtime:
+          address: unix:///run/k3s/containerd/containerd.sock
       components:
         scanner:
           enabled: false
