@@ -20,6 +20,6 @@ spec:
     namespace: azure-workload-identity-system
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: false
+      selfHeal: false
       allowEmpty: true
