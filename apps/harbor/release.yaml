@@ -31,6 +31,15 @@ spec:
           nginx.ingress.kubernetes.io/proxy-body-size: "0"
           cert-manager.io/cluster-issuer: "le-prod"
     externalURL: https://harbor.lab.gravitytech.io
+    portal:
+      replicas: 3
+    core:
+      replicas: 3
+    jobservice:
+      replicas: 3
+    registry:
+      replicas: 3
+    
     ipFamily:
       ipv6:
         enabled: false
