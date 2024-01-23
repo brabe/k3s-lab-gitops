@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: cert-manager
+      version: 'v1.13.3'
+      sourceRef:
+        kind: HelmRepository
+        name: cert-manager
+        namespace: flux-system
+      interval: 1m
+  values:
+    namespace: cert-manager
+    installCRDs: true
+    extraArgs:
+      - "--dns01-recursive-nameservers-only"
+      - "--dns01-recursive-nameservers=1.1.1.1:53"
