@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: harbor-claim
+  namespace: harbor
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeName: harbor-volume
