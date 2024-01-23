@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: azure-workload-identity
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: azure-workload-identity
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/brabe/k3s-lab-gitops
+    targetRevision: HEAD
+    path: apps/azwi
+
+  # Destination cluster and namespace to deploy the application
+  destination:
+    name: in-cluster
+    namespace: azure-workload-identity-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
