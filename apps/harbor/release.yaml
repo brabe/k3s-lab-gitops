@@ -20,6 +20,8 @@ spec:
       tls:
         enabled: true
         certSource: secret
+        secret:
+          secretName: harbor-ingress-tls-cert
       ingress:
         hosts:
           core: harbor.lab.gravitytech.io
