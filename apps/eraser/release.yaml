@@ -15,4 +15,7 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    
+    runtimeConfig:
+      components:
+        scanner:
+          enabled: false
