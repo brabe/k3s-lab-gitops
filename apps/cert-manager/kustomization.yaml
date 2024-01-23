@@ -1,6 +1,7 @@
 namespace: cert-manager
 
 resources:
+  - "issuer.yaml"
   - "namespace.yaml"
   - "release.yaml"
 
