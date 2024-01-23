@@ -4,6 +4,7 @@ metadata:
   name: harbor-volume
   namespace: harbor
 spec:
+  storageClassName: nfs-harbor
   capacity:
     storage: 1000Gi
   accessModes:

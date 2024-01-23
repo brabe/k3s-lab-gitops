@@ -4,9 +4,11 @@ metadata:
   name: harbor-claim
   namespace: harbor
 spec:
+  storageClassName: nfs-harbor
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi
   volumeName: harbor-volume
+  
