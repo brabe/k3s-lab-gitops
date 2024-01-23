@@ -1,0 +1,40 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: argocd-server
+rules:
+  - apiGroups:
+    - ""
+    resources:
+    - pods/exec
+    verbs:
+    - create
+  - verbs:
+      - delete
+      - get
+      - patch
+    apiGroups:
+      - '*'
+    resources:
+      - '*'
+  - verbs:
+      - list
+    apiGroups:
+      - ''
+    resources:
+      - events
+  - verbs:
+      - get
+    apiGroups:
+      - ''
+    resources:
+      - pods
+      - pods/log
+  - verbs:
+      - get
+      - list
+      - watch
+    apiGroups:
+      - argoproj.io
+    resources:
+      - applications
